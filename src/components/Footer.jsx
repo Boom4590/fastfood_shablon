@@ -80,13 +80,13 @@ function Footer() {
       `}</style>
       <div className="social-icons">
         <a href="https://instagram.com">Instagram</a>
-       <ul>
-         <li>
+       <div>
+         <div>
             <Link to="/about">About</Link>
-          </li>
-          <li><a href="https://wa.me/1234567890" >Contact Us</a></li>
+          </div>
+          <div><a href="https://wa.me/1234567890" >Contact Us</a></div>
       
-       </ul>
+       </div>
        </div>
     </footer>
   );

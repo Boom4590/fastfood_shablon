@@ -35,7 +35,7 @@ body {
 }
 /* Tablet Styles (768px-1279px) */
 @media (min-width: 768px) and (max-width: 1479px) {
-  #locations, #about {
+  #locations, #about,.hero-image {
     margin-top: 80px;
   }
   .burger-btn,#burgerito{

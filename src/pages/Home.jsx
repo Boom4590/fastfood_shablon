@@ -6,37 +6,32 @@ function Home() {
   const categoryRefs = useRef({});
   const { categories, items } = menuData;
 
+  const handleCategoryClick = (cat) => {
+    setActiveCategory(cat);
+    const element = categoryRefs.current[cat];
+    const container = element?.parentElement;
+    if (element && container) {
+      if (cat === "all") {
+        container.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      } else {
+        const elementLeft = element.offsetLeft;
+        const elementWidth = element.offsetWidth;
+        const containerWidth = container.offsetWidth;
+        const containerPaddingLeft = parseFloat(getComputedStyle(container).paddingLeft) || 0;
+        const scrollTo = elementLeft - containerWidth / 2 + elementWidth / 2 - containerPaddingLeft;
+        const maxScrollLeft = container.scrollWidth - containerWidth;
+        const finalScroll = Math.max(0, Math.min(scrollTo, maxScrollLeft));
 
-
-
-
- const handleCategoryClick = (cat) => {
-  setActiveCategory(cat);
-  const element = categoryRefs.current[cat];
-  const container = element?.parentElement;
-  if (element && container) {
-    if (cat === "all") {
-      container.scrollTo({
-        left: 0,
-        behavior: "smooth",
-      });
-    } else {
-      const elementLeft = element.offsetLeft;
-      const elementWidth = element.offsetWidth;
-      const containerWidth = container.offsetWidth;
-      const containerPaddingLeft = parseFloat(getComputedStyle(container).paddingLeft) || 0;
-      const scrollTo = elementLeft - containerWidth / 2 + elementWidth / 2 - containerPaddingLeft;
-      const maxScrollLeft = container.scrollWidth - containerWidth;
-      const finalScroll = Math.max(0, Math.min(scrollTo, maxScrollLeft));
-
-      container.scrollTo({
-        left: finalScroll,
-        behavior: "smooth",
-      });
+        container.scrollTo({
+          left: finalScroll,
+          behavior: "smooth",
+        });
+      }
     }
-  }
-};
-
+  };
 
   const handleKeyDown = (e, cat) => {
     if (e.key === "Enter" || e.key === " ") {
@@ -52,7 +47,7 @@ function Home() {
           flex: 1;
           padding-bottom: 120px;
           font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-          background-color: #fff;
+          background-color: #f4f9f4;
         }
 
         .hero {
@@ -74,7 +69,7 @@ function Home() {
           height: 100%;
           object-fit: cover;
           z-index: 1;
-          filter: brightness(0.6);
+          filter: brightness(0.7);
         }
 
         .hero-content {
@@ -82,6 +77,54 @@ function Home() {
           max-width: 1280px;
           padding: 0 20px;
           color: #fff;
+        }
+
+        #animate-button {
+          position: relative;
+          cursor: pointer;
+          padding: 15px 40px;
+          border-radius: 8px;
+          border: none;
+          background: #27ae60;
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          overflow: hidden;
+          transition: background-color 0.3s ease;
+          user-select: none;
+          z-index: 0;
+        }
+
+        #animate-button:hover {
+          background-color: #219150;
+        }
+
+        #animate-button::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(-65deg, transparent 40%, rgba(255,255,255,0.47) 50%, transparent 70%);
+          background-size: 200% 100%;
+          background-repeat: no-repeat;
+          pointer-events: none;
+          animation: shineAnim 3s ease infinite;
+          border-radius: inherit;
+          z-index: 1;
+        }
+
+        @keyframes shineAnim {
+          0% {
+            background-position: 130%;
+            opacity: 1;
+          }
+          25% {
+            background-position: -166%;
+            opacity: 0;
+          }
+          100% {
+            background-position: -166%;
+            opacity: 0;
+          }
         }
 
         .hero-content h1 {
@@ -99,7 +142,7 @@ function Home() {
         }
 
         .hero-content button {
-          background-color: #e31837;
+          background-color: #28a745;
           color: #fff;
           border: none;
           padding: 15px 35px;
@@ -111,7 +154,7 @@ function Home() {
         }
 
         .hero-content button:hover {
-          background-color: #c1122f;
+          background-color: #218838;
         }
 
         .promo {
@@ -127,7 +170,7 @@ function Home() {
           font-size: 36px;
           font-weight: 700;
           margin-bottom: 12px;
-          color: #e31837;
+          color: #28a745;
           animation: fadeIn 1s ease-in;
         }
 
@@ -138,7 +181,7 @@ function Home() {
         }
 
         .promo button {
-          background-color: #e31837;
+          background-color: rgb(210, 231, 215);
           color: #fff;
           border: none;
           padding: 15px 35px;
@@ -150,7 +193,7 @@ function Home() {
         }
 
         .promo button:hover {
-          background-color: #c1122f;
+          background-color: #218838;
         }
 
         .menu {
@@ -163,33 +206,35 @@ function Home() {
         }
 
         .categories {
-      
-    width: 100%;
-    padding-left: 10px; /* Уменьшаем padding-left */
-    padding-right: 20px;
-    display: flex;
-    justify-content:center;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px 0;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: #d32f2f #f5f5f5;
-  }
+          width: 100%;
+          padding-left: 10px;
+          padding-right: 20px;
+          display: flex;
+          justify-content: center;
+          overflow-x: auto;
+          gap: 10px;
+          padding: 10px 0;
+          white-space: nowrap;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: thin;
+          scrollbar-color: rgb(255, 255, 255) #f5f5f5;
+        }
 
-  .category:first-child {
-    margin-left: 0; /* Убираем лишний отступ для первой категории */
-  }
+        .category:first-child {
+          margin-left: 0;
+        }
+
         .categories::-webkit-scrollbar {
           display: none;
         }
 
         .category {
+          width: 150px;
+          text-align: center;
           padding: 8px 16px;
-          border-radius: 20px;
+          border-radius: 10px;
           font-size: 14px;
-          background-color: #f5f5f5;
+          background-color: #e6f4ea;
           color: #333;
           white-space: nowrap;
           cursor: pointer;
@@ -198,14 +243,15 @@ function Home() {
 
         .category.active,
         .category:hover {
-          background-color: #e31837;
+          background-color: #28a745;
           color: #fff;
         }
 
         .menu-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 24px;
+          grid-template-columns: repeat(3, 1fr);
+          margin: 10px 60px;
+          gap: 44px;
         }
 
         .menu-item {
@@ -216,6 +262,9 @@ function Home() {
           transition: transform 0.2s ease, box-shadow 0.2s ease;
           display: flex;
           flex-direction: column;
+          align-items: stretch;
+          animation: fadeInUp 0.3s ease-out forwards; /* Animation applied */
+          opacity: 0; /* Start invisible for animation */
         }
 
         .menu-item:hover {
@@ -225,8 +274,10 @@ function Home() {
 
         .menu-image {
           width: 100%;
-          height: 220px;
-          object-fit: cover;
+          height: auto;
+          object-fit: contain;
+          display: block;
+          background-color: transparent;
         }
 
         .menu-item-content {
@@ -234,6 +285,7 @@ function Home() {
           display: flex;
           flex-direction: column;
           gap: 8px;
+          flex-grow: 1;
         }
 
         .menu-item h3 {
@@ -252,13 +304,25 @@ function Home() {
         .menu-item .price {
           font-size: 16px;
           font-weight: 700;
-          color: #e31837;
+          color: #28a745;
         }
 
         .menu-item .new-badge {
           font-size: 12px;
-          color: #e31837;
+          color: #28a745;
           font-weight: 600;
+        }
+
+        /* Animation for menu items */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .testimonials {
@@ -266,7 +330,7 @@ function Home() {
           max-width: 1280px;
           margin: 0 auto;
           text-align: center;
-          background: #f5f5f5;
+          background: #e6f4ea;
         }
 
         .testimonials h2 {
@@ -305,7 +369,7 @@ function Home() {
         .testimonial-card .author {
           font-size: 13px;
           font-weight: 600;
-          color: #e31837;
+          color: #28a745;
         }
 
         .cta {
@@ -331,7 +395,7 @@ function Home() {
         }
 
         .cta button {
-          background-color: #e31837;
+          background-color: rgb(211, 222, 214);
           color: #fff;
           border: none;
           padding: 15px 35px;
@@ -343,7 +407,7 @@ function Home() {
         }
 
         .cta button:hover {
-          background-color: #c1122f;
+          background-color: #218838;
         }
 
         @keyframes fadeIn {
@@ -351,21 +415,23 @@ function Home() {
           to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Mobile Styles (below 768px, original) */
+        /* Mobile Styles */
         @media (max-width: 767px) {
+        .header{
+        height:74px;
+        background-color:green}
           .main-content {
-            flex: 1;
             padding-bottom: 100px;
           }
 
           .hero {
             height: 80vh;
-            background-color: #ffebee;
+            background-color: #e6f4ea;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0;
+            padding: 20px 0 0 0;
             position: relative;
           }
 
@@ -389,7 +455,6 @@ function Home() {
             margin-bottom: 20px;
             color: #fff;
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-            animation: fadeIn 1s ease-in;
           }
 
           .hero-content p {
@@ -400,7 +465,7 @@ function Home() {
           }
 
           .hero-content button {
-            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            background: linear-gradient(135deg, #28a745, #218838);
             color: #fff;
             border: none;
             padding: 12px 30px;
@@ -430,31 +495,31 @@ function Home() {
           }
 
           .categories {
-    width: 100%;
-    padding-left: 0; /* Уменьшаем padding-left */
-    padding-right: 0;
-    display: flex;
-    justify-content:flex-start;
-    margin:o auto;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px 0;
-    white-space: nowrap;
-    scroll-snap-type: x andatory;
-    scrollbar-width: thin;
-    scrollbar-color:rgb(255, 255, 255) #f5f5f5;
-  }
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0 auto;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px 0;
+            white-space: nowrap;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color:rgb(255, 255, 255) #f5f5f5;
+          }
 
-  .category:first-child {
-    margin-left: 0; /* Убираем лишний отступ для первой категории */
-  }
+          .category:first-child {
+            margin-left: 0;
+          }
 
           .categories::-webkit-scrollbar {
             height: 8px;
           }
 
           .categories::-webkit-scrollbar-thumb {
-            background-color: #d32f2f;
+            background-color: #28a745;
             border-radius: 4px;
           }
 
@@ -463,14 +528,14 @@ function Home() {
           }
 
           .category {
-            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            background: linear-gradient(135deg, #28a745, #218838);
             color: #fff;
             padding: 10px 20px;
             border-radius: 6px;
             display: flex;
-            justify-content:center;
-            align-items:center;
-            width:100px;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
             cursor: pointer;
             flex-shrink: 0;
             font-size: 18px;
@@ -485,12 +550,11 @@ function Home() {
           }
 
           .category.active {
-            background: linear-gradient(135deg, #b71c1c, #9a0007);
-           
+            background: linear-gradient(135deg, #218838, #1e7e34);
           }
 
           .category:focus {
-            outline: 2px solid #b71c1c;
+            outline: 2px solid #218838;
             outline-offset: 2px;
           }
 
@@ -507,6 +571,11 @@ function Home() {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             will-change: transform;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            animation: fadeInUp 0.3s ease-out forwards;
+            opacity: 0;
           }
 
           .menu-item:hover {
@@ -516,9 +585,10 @@ function Home() {
 
           .menu-image {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
             display: block;
+            background-color: transparent;
           }
 
           .menu-item-content {
@@ -526,6 +596,7 @@ function Home() {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            flex-grow: 1;
           }
 
           .menu-item h3 {
@@ -535,29 +606,10 @@ function Home() {
             color: #333;
           }
 
-          .menu-item p {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 12px;
-            line-height: 1.5;
-          }
-
-          .menu-item .price {
-            font-size: 18px;
-            font-weight: 700;
-            color: #d32f2f;
-          }
-
-          .menu-item .new-badge {
-            font-size: 14px;
-            color: #d32f2f;
-            font-weight: 600;
-          }
-
           .testimonials {
             padding: 40px 20px;
             text-align: center;
-            background: linear-gradient(135deg, #fff, #f5f5f5);
+            background: linear-gradient(135deg, #e6f4ea, #d4edda);
           }
 
           .testimonials h2 {
@@ -596,11 +648,11 @@ function Home() {
           .testimonial-card .author {
             font-size: 14px;
             font-weight: 600;
-            color: #d32f2f;
+            color: #28a745;
           }
 
           .cta {
-            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            background: linear-gradient(135deg, #e6f4ea, #d4edda);
             padding: 40px 20px;
             text-align: center;
           }
@@ -619,7 +671,7 @@ function Home() {
           }
 
           .cta button {
-            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            background: linear-gradient(135deg, #28a745, #218838);
             color: #fff;
             border: none;
             padding: 12px 30px;
@@ -647,6 +699,7 @@ function Home() {
           <h1 className="animate-fadeIn">Welcome to Fast Food</h1>
           <p>Discover delicious meals at our Bishkek locations. Order now on Glovo!</p>
           <button
+            id="animate-button"
             onClick={() => window.location.href = "https://glovoapp.com"}
             aria-label="Order on Glovo"
           >
@@ -654,7 +707,7 @@ function Home() {
           </button>
         </div>
       </section>
-      <section className="promo" style={{display:'none'}}>
+      <section className="promo" style={{ display: 'none' }}>
         <h2 className="animate-fadeIn">Today’s Deal</h2>
         <p>50 bonus points for registering in our app!</p>
         <button
@@ -671,7 +724,9 @@ function Home() {
               key={cat}
               ref={(el) => (categoryRefs.current[cat] = el)}
               className={`category ${activeCategory === cat ? "active" : ""}`}
-              onClick={() => handleCategoryClick(cat)}
+              onClick={() =>
+
+ handleCategoryClick(cat)}
               onKeyDown={(e) => handleKeyDown(e, cat)}
               tabIndex="0"
               role="button"
@@ -682,11 +737,15 @@ function Home() {
           ))}
         </div>
         <div className="menu-grid">
-          {items.map((item) =>
-            (activeCategory === "all" || item.category === activeCategory) && (
-              <div key={item.id} className="menu-item">
+          {items.map((item, index) =>
+            (activeCategory === "Популярн." || item.category === activeCategory) && (
+              <div
+                key={item.id}
+                className="menu-item"
+                style={{ animationDelay: `${index * 0.1}s` }} /* Staggered delay */
+              >
                 <img
-                  src={item.image || ""}
+                  src={item.image || "https://via.placeholder.com/400x300"}
                   alt={item.name}
                   className="menu-image"
                   loading="lazy"
@@ -723,6 +782,7 @@ function Home() {
         <h2 className="animate-fadeIn">Ready to Order?</h2>
         <p>Visit Glovo to enjoy our delicious menu today!</p>
         <button
+          id="animate-button"
           onClick={() => window.location.href = "https://glovoapp.com"}
           aria-label="Order on Glovo Now"
         >

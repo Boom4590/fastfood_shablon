@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,25 +5,29 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+function toMenu(){
+    document.getElementById("menu")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+                window.location.href = "/"
+}
   const handleKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      toggleMenu();
-    }
+    if (e.key === "Enter" || e.key === " ") toggleMenu();
   };
 
   return (
     <>
       <style jsx>{`
-        /* Desktop Styles (1280px+) */
         .header {
-          background-color: #fff;
+          background-color: rgba(255, 255, 255, 0.3)); /* прозрачный зелёный */
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(10px);
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
           position: fixed;
           width: 100%;
           top: 0;
           z-index: 1000;
-          padding: 16px 0;
+          padding: 12px 0;
         }
 
         .header-container {
@@ -36,116 +39,70 @@ function Header() {
           justify-content: space-between;
         }
 
-        .logo {
-          font-size: 30px;
-          font-weight: 700;
-          color: #e31837;
-          flex-shrink: 0;
-          letter-spacing: 0.5px;
+        .logo img {
+          height: 48px;
+          object-fit: contain;
         }
 
-        .desktop-nav {
-          display: block;
-        }
-
-        .desktop-nav ul {
+        .right-section {
           display: flex;
-          gap: 24px;
-          list-style: none;
-          margin: 0;
-          padding: 0;
+          justify-content: center;
+          gap: 16px;
+          align-items: center;
         }
-
-        .desktop-nav ul li {
-          padding: 8px 12px;
-        }
-
-        .desktop-nav ul li a {
-          color: #333;
-          font-size: 16px;
-          font-weight: 600;
+        .right-section a {
+          margin-left: 0;
           text-decoration: none;
-          transition: color 0.2s ease;
         }
-
-        .desktop-nav ul li a:hover {
-          color: #e31837;
-          text-decoration: underline;
-        }
-
-        .lang-btn {
-          background-color: #e31837;
+        .nav-button {
+          background-color: #228b22; /* forest green */
           color: #fff;
           border: none;
-          padding: 10px 20px;
+          padding: 10px 18px;
           border-radius: 6px;
           cursor: pointer;
           font-size: 16px;
           font-weight: 600;
-          transition: background-color 0.2s ease;
+          transition: background-color 0.3s ease;
+          box-shadow: 0 2px 6px rgba(34, 139, 34, 0.5);
         }
 
-        .lang-btn:hover {
-          background-color: #c1122f;
+        .nav-button:hover {
+          background-color: #196619; /* чуть темнее */
+          box-shadow: 0 4px 12px rgba(25, 102, 25, 0.7);
         }
 
-        /* Tablet/Mobile Styles (Original, below 1280px) */
+        .instagram-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color:rgb(255, 255, 255);
+          font-size: 36px;
+          margin-left:60px;
+          transition: transform 0.2s ease, color 0.3s ease;
+          cursor: pointer;
+        }
+
+        .instagram-logo:hover {
+          transform: scale(1.2);
+          color:rgb(220, 55, 0);
+        }
+
         @media (max-width: 1279px) {
-          .header {
-            background-color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 20px;
-          }
-
-          .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1280px;
-            margin: 0 auto;
-          }
-
-          .desktop-nav {
+          .desktop-nav,
+          .nav-button {
             display: none;
-          }
-
-          .logo {
-            font-size: 40px;
-            font-weight: 800;
-            color: #d32f2f;
-            letter-spacing: 1.5px;
           }
 
           .burger-btn {
             font-size: 32px;
             cursor: pointer;
-            color: #333;
+            color: #fff;
             transition: color 0.3s;
           }
 
           .burger-btn:hover {
-            color: #d32f2f;
-          }
-
-          .lang-btn {
-            background: linear-gradient(135deg, #d32f2f, #b71c1c);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-          }
-
-          .lang-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            color: #228b22;
           }
 
           .burger-menu {
@@ -155,12 +112,11 @@ function Header() {
             width: 80%;
             max-width: 300px;
             height: 100%;
-            background-color: #fff;
+            background-color: #f0fff0; /* светло-зеленоватый фон */
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
             transition: left 0.3s ease;
             z-index: 2000;
             padding: 20px;
-
           }
 
           .burger-menu.active {
@@ -176,7 +132,7 @@ function Header() {
           }
 
           .burger-menu .close-btn:hover {
-            color: #d32f2f;
+            color: #228b22;
           }
 
           .burger-menu ul {
@@ -197,10 +153,11 @@ function Header() {
           }
 
           .burger-menu ul li a:hover {
-            color: #d32f2f;
+            color: #228b22;
           }
         }
       `}</style>
+
       <header className="header">
         <div className="header-container">
           <div
@@ -209,39 +166,51 @@ function Header() {
             onKeyDown={handleKeyDown}
             tabIndex="0"
             role="button"
-            aria-label="Toggle navigation menu"
+            aria-label="Toggle menu"
           >
             ☰
           </div>
-          <div className="logo">Fast Food</div>
-          <nav className="desktop-nav">
-            <ul>
-              <li><Link to="/locations">Locations in Bishkek</Link></li>
-              <li>
-                <Link
-                  to="/"
-                  onClick={() => document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Our Menu
-                </Link>
-              </li>
-              
-            </ul>
-          </nav>
-         <a
-  href="https://instagram.com/yourpage"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Instagram"
-  className="instagram-logo"
->
-  <i className="fab fa-instagram" style={{ fontSize: 30,color:'red' }}></i>
-</a>
 
+          <div className="logo">
+            <Link to="/">
+              <img src="/images/logo.png" alt="Fast Food Logo" />
+            </Link>
+          </div>
+
+          <div className="right-section">
+            <button
+              className="nav-button"
+              onClick={() => (window.location.href = "/locations")}
+            >
+              Locations in Bishkek
+            </button>
+            <button
+              className="nav-button"
+              onClick={toMenu}
+            >
+              Our Menu
+            </button>
+            <a
+              href="https://instagram.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="instagram-logo"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
       </header>
+
       <div className={`burger-menu ${isMenuOpen ? "active" : ""}`} id="burgerito">
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <h2>Bishkek</h2>
           <div
             className="close-btn"
@@ -249,30 +218,35 @@ function Header() {
             onKeyDown={handleKeyDown}
             tabIndex="0"
             role="button"
-            aria-label="Close navigation menu"
+            aria-label="Close menu"
           >
             ✕
           </div>
         </div>
         <ul>
           <li>
-            <Link to="/locations" onClick={toggleMenu}>Locations in Bishkek</Link>
+            <Link to="/locations" onClick={toggleMenu}>
+              Locations in Bishkek
+            </Link>
           </li>
           <li>
             <Link
               to="/"
               onClick={() => {
                 toggleMenu();
-                document.getElementById("menu")?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("menu")?.scrollIntoView({
+                  behavior: "smooth",
+                });
               }}
             >
               Our Menu
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={toggleMenu}>About</Link>
+            <Link to="/about" onClick={toggleMenu}>
+              About
+            </Link>
           </li>
-          <li><a href="https://wa.me/1234567890" onClick={toggleMenu}>Contact Us</a></li>
         </ul>
       </div>
     </>

@@ -1,22 +1,18 @@
 
 {
   "categories": [
-    "all",
-    "shawarma",
-    "burgers",
-    "drinks",
-    "desserts",
-    "sides",
-    "salads",
-    "breakfast",
-    "combos",
-    "kids",
-    "other"
+    "Популярн.",
+    "Донеры",
+    "Запеч. д",
+    "Бургеры",
+    "Напитки",
+    "Кебабы",
+    "другие"
   ],
   "items": [
     {
       "id": 1,
-      "category": "shawarma",
+      "category": "Запеч. д",
       "name": "Запеченный донер говядина",
       "description": "Лаваш, говядина, овощи, соус, сыр",
       "price": 275,
@@ -24,7 +20,7 @@
     },
     {
       "id": 2,
-      "category": "shawarma",
+      "category": "Запеч. д",
       "name": "Запеченный донер курица",
       "description": "Лаваш, курица, овощи, соус, сыр",
       "price": 275,
@@ -32,7 +28,7 @@
     },
     {
       "id": 3,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Биг донер говядина",
       "description": "Сырный лаваш, говядина, овощи, соус",
       "price": 300,
@@ -40,7 +36,7 @@
     },
     {
       "id": 4,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Биг донер курица",
       "description": "Сырный лаваш, курица, овощи, соус",
       "price": 300,
@@ -49,7 +45,7 @@
     },
     {
       "id": 5,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Биг донер говядина чили",
       "description": "Сырный лаваш, говядина, овощи, соус чили, сыр",
       "price": 300,
@@ -58,7 +54,7 @@
     },
     {
       "id": 6,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Донер говядина чили",
       "description": "Лаваш, говядина, овощи, соус чили, сыр",
       "price": 275,
@@ -66,7 +62,7 @@
     },
     {
       "id": 7,
-       "category": "shawarma",
+       "category": "Донеры",
       "name": "Донер говядина",
       "description": "Лаваш, говядина, овощи, соус",
       "price": 275,
@@ -74,7 +70,7 @@
    },
     {
       "id": 8,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Донер курица",
       "description": "Лаваш, курица, овощи, соус",
       "price": 275,
@@ -82,7 +78,7 @@
     },
     {
       "id": 9,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Донер ассорти",
       "description": "Лаваш, курица, говядина, овощи, соус, сыр",
      "price": 275,
@@ -90,7 +86,7 @@
     },
     {
       "id": 10,
-      "category": "shawarma",
+      "category": "Донеры",
       "name": "Донер ассорти чили",
       "description": "Лаваш, курица, говядина, овощи, соус чили, сыр",
      "price": 275,
@@ -98,7 +94,7 @@
    },
     {
       "id": 11,
-      "category": "shawarma",
+      "category": "Запеч. д",
       "name": "Запеченный донер говядина чили",
       "description": "Лаваш, говядина, овощи, соус чили, сыр",
       "price": 275,
@@ -106,7 +102,7 @@
     },
     {
       "id": 12,
-      "category": "shawarma",
+      "category": "Запеч. д",
       "name": "Запеченный донер курица чили",
       "description": "Лаваш, говядина, овощи, соус чили, сыр",
       "price": 275,
@@ -114,160 +110,208 @@
     },
     {
       "id": 13,
-      "category": "drinks",
-      "name": "Лимонад Клубника-кактус",
-      "description": "Refreshing strawberry-cactus lemonade.",
-      "price": 150,
-      "image": "/images/lemonade.jpg"
+      "category": "Кебабы",
+      "name": "Искандер-кебаб говядина",
+      "description": "Говядина, рассыпчатый рис, специи",
+      "price": 188,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/2b55ebc7-1b25-4dec-874a-790ac900817d.jpg"
     },
     {
       "id": 14,
-      "category": "drinks",
-      "name": "Фраппе Вишневый (сред.)",
-      "description": "Cherry frappe, medium size.",
-      "price": 180,
-      "image": "/images/cherry-frappe.jpg",
-      "isNew": true
-    },
+      "category": "Кебабы",
+      "name": "Искандер-кебаб говядина чили",
+      "description": "Говядина, рассыпчатый рис, специи, соус чили",
+      "price": 188,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/2b55ebc7-1b25-4dec-874a-790ac900817d.jpg"
+     },
     {
       "id": 15,
-      "category": "drinks",
-      "name": "Айс Какао",
-      "description": "Iced cocoa drink.",
-      "price": 160,
-      "image": "/images/ice-cocoa.jpg",
+      "category": "Кебабы",
+      "name": "Искандер-кебаб курица",
+      "description": "Курица, рассыпчатый рис, специи",
+      "price": 188,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/9c432aaf-421b-4cef-b2b2-a45e3062d38a.jpg",
       "isNew": true
     },
     {
       "id": 16,
-      "category": "desserts",
-      "name": "Чуррос",
-      "description": "Crispy churros with cinnamon.",
-      "price": 120,
-      "image": "/images/churros.jpg"
+     "category": "Кебабы",
+      "name": "Искандер-кебаб курица чили",
+      "description": "Курица, рассыпчатый рис, специи, соус чили",
+      "price": 188,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/9c432aaf-421b-4cef-b2b2-a45e3062d38a.jpg",
+      "isNew": true
     },
     {
       "id": 17,
-      "category": "desserts",
-      "name": "Орешки со сгущёнкой",
-      "description": "Nut-shaped pastries with condensed milk.",
-      "price": 100,
-      "image": "/images/nuts.jpg",
-      "isNew": true
+      "category": "Бургеры",
+      "name": "Донер бургер говядина",
+      "description": "Булочка, говядина, майонез, огурцы, помидоры, картошка пай, говядина, шашлычный соус",
+      "price": 225,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/47afd91f-636c-4c43-89a2-35f4ac554f1c.jpg"
     },
     {
       "id": 18,
-      "category": "desserts",
-      "name": "Пирожное Картошка",
-      "description": "Chocolate potato pastry.",
-      "price": 90,
-      "image": "/images/potato-cake.jpg",
-      "isNew": true
+      "category": "Бургеры",
+      "name": "Донер бургер говядина чили",
+      "description": "Булочка, говядина, майонез, огурцы, помидоры, картошка пай, говядина, шашлычный соус, перец халапенью и чили соус добавляется ",
+      "price": 225,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/47afd91f-636c-4c43-89a2-35f4ac554f1c.jpg"
+   
     },
     {
       "id": 19,
-      "category": "desserts",
-      "name": "Медовик",
-      "description": "Honey layered cake.",
-      "price": 110,
-      "image": "/images/honey-cake.jpg",
-      "isNew": true
+        "category": "Бургеры",
+      "name": "Донер бургер курица чили",
+      "description": "Булочка, курица, майонез, огурцы, помидоры, картошка пай, говядина, шашлычный соус, перец халапенью и чили соус добавляется ",
+      "price": 225,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/47afd91f-636c-4c43-89a2-35f4ac554f1c.jpg"
+   
     },
     {
       "id": 20,
-      "category": "desserts",
-      "name": "Chocolate Cake",
-      "description": "Rich chocolate cake with a creamy frosting.",
-      "price": 200,
-      "image": "/images/chocolate-cake.jpg"
+        "category": "Бургеры",
+      "name": "Донер бургер курица чили",
+      "description": "Булочка, курица, майонез, огурцы, помидоры, картошка пай, говядина, шашлычный соус ",
+      "price": 225,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/47afd91f-636c-4c43-89a2-35f4ac554f1c.jpg"
+   
     },
     {
       "id": 21,
-      "category": "desserts",
-      "name": "Ice Cream Sundae",
-      "description": "Vanilla ice cream with chocolate sauce and sprinkles.",
-      "price": 180,
-      "image": "/images/ice-cream-sundae.jpg"
+      "category": "Напитки",
+      "name": "Coca-Cola Zero (1л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 125,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/6535268a-5140-4346-8507-fef6eba50fba.png"
     },
     {
       "id": 22,
-      "category": "sides",
-      "name": "French Fries",
-      "description": "Crispy golden fries, lightly salted.",
-      "price": 120,
-      "image": "/images/french-fries.jpg"
+       "category": "Напитки",
+      "name": "Coca-Cola Zero (1л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 125,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/6535268a-5140-4346-8507-fef6eba50fba.png"
     },
     {
       "id": 23,
-      "category": "sides",
-      "name": "Onion Rings",
-      "description": "Crispy battered onion rings with a dipping sauce.",
-      "price": 140,
-      "image": "/images/onion-rings.jpg"
-    },
+      "category": "Напитки",
+      "name": "Coca-Cola (1л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 125,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/6535268a-5140-4346-8507-fef6eba50fba.png"
+   },
     {
       "id": 24,
-      "category": "salads",
-      "name": "Caesar Salad",
-      "description": "Fresh romaine, croutons, parmesan, and Caesar dressing.",
-      "price": 220,
-      "image": "/images/caesar-salad.jpg"
+       "category": "Напитки",
+      "name": "Fanta (1л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 125,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/70f072a4-7fb3-48c9-b359-9d1e9476ede3.png"
     },
     {
       "id": 25,
-      "category": "salads",
-      "name": "Greek Salad",
-      "description": "Cucumbers, tomatoes, feta, olives, and olive oil dressing.",
-      "price": 200,
-      "image": "/images/greek-salad.jpg"
+     "category": "Напитки",
+      "name": "Sprite (1л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 125,
+      "image": "https://share-menu.kwaaka.com/images/6625b86d93c14f299dbffcd4/7a5ea5ca-2bda-4e07-8f5c-03c736dcc7a6.png"
     },
     {
       "id": 26,
-      "category": "breakfast",
-      "name": "Egg Muffin",
-      "description": "Toasted muffin with egg, cheese, and sausage.",
-      "price": 180,
-      "image": "/images/egg-muffin.jpg"
+      "category": "Напитки",
+      "name": "Gorilla classic",
+      "description": "Энергетический газированный напиток",
+      "price": 106,
+      "image": "https://cdn2.may24.ru/upload/iblock/490/490fc8197e78232d6e9c2cfe57df57f4.jpg"
     },
     {
       "id": 27,
-      "category": "breakfast",
-      "name": "Pancake Stack",
-      "description": "Fluffy pancakes with maple syrup and butter.",
-      "price": 200,
-      "image": "/images/pancake-stack.jpg"
+      "category": "Напитки",
+      "name": "Gorilla Peach",
+      "description": "Энергетический газированный напиток",
+      "price": 106,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/cb91e550-e646-43a7-baf4-424eae106d17.jpg"
     },
     {
       "id": 28,
-      "category": "combos",
-      "name": "Burger Combo",
-      "description": "Classic burger, fries, and a cola.",
-      "price": 450,
-      "image": "/images/burger-combo.jpg"
+      "category": "Напитки",
+      "name": "Piko виноград",
+      "description": "Натуральный сок",
+      "price": 106,
+      "image": "https://share-menu.kwaaka.com/images/6625b86d93c14f299dbffcd4/9544172e-8806-42cf-9113-1c4c231c7c19.png"
     },
     {
       "id": 29,
-      "category": "combos",
-      "name": "Shawarma Combo",
-      "description": "Chicken shawarma, side salad, and a drink.",
-      "price": 400,
-      "image": "/images/shawarma-combo.jpg"
+      "category": "Напитки",
+      "name": "Piko Апельсин",
+      "description": "Натуральный сок",
+      "price": 106,
+      "image": "https://share-menu.kwaaka.com/images/6625b86d93c14f299dbffcd4/49b9a2c3-7682-4ee8-a7f3-b6eb16656810.png106"
     },
     {
       "id": 30,
-      "category": "kids",
-      "name": "Кидз Комбо обед с игрушкой Мини-фест",
-      "description": "Kids meal with a toy.",
-      "price": 300,
-      "image": "/images/kids-combo.jpg"
+      "category": "Напитки",
+      "name": "Gorilla Mango",
+      "description": "Энергетический газированный напиток",
+      "price": 106,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/16e946cc-84c5-4079-8386-986951bc8870.jpg"
     },
     {
       "id": 31,
-      "category": "other",
-      "name": "Стикеры в помощь детям 1 шт.",
-      "description": "Charity stickers.",
-      "price": 50,
-      "image": "/images/stickers.jpg"
+      "category": "Напитки",
+      "name": "Fuse tea персик (0,5л)",
+      "description": "Негазированный, безалкогольный напиток.",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/6625b86d93c14f299dbffcd4/60797790-891c-439d-a45e-35179e4a8e49.png"
+    },
+     {
+      "id": 32,
+      "category": "Напитки",
+      "name": "Fuse tea клубника-малина (0,5л)",
+      "description": "Холодный чай",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/1f3fd937-3f69-41a3-885b-45ad7ac656fb.jpg"
+    },
+      {
+      "id": 33,
+      "category": "Напитки",
+      "name": "Coca-Cola Zero (0.5л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/6535268a-5140-4346-8507-fef6eba50fba.png"
+    },
+    {
+      "id": 34,
+       "category": "Напитки",
+      "name": "Coca-Cola Zero (0.5л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/6535268a-5140-4346-8507-fef6eba50fba.png"
+    },
+    {
+      "id": 35,
+      "category": "Напитки",
+      "name": "Coca-Cola (0.5л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/6535268a-5140-4346-8507-fef6eba50fba.png"
+   },
+    {
+      "id": 36,
+       "category": "Напитки",
+      "name": "Fanta (0.5л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/6555a0a7d306f16909f2cb87/70f072a4-7fb3-48c9-b359-9d1e9476ede3.png"
+    },
+    {
+      "id": 37,
+     "category": "Напитки",
+      "name": "Sprite (0.5л)",
+      "description": "Газированный, безалкогольный напиток",
+      "price": 75,
+      "image": "https://share-menu.kwaaka.com/images/6625b86d93c14f299dbffcd4/7a5ea5ca-2bda-4e07-8f5c-03c736dcc7a6.png"
     }
   ]
 }
