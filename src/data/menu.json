@@ -1,3 +1,4 @@
+
 {
   "categories": [
     "all",
@@ -8,120 +9,265 @@
     "sides",
     "salads",
     "breakfast",
-    "combos"
+    "combos",
+    "kids",
+    "other"
   ],
   "items": [
     {
       "id": 1,
       "category": "shawarma",
-      "name": "Chicken Shawarma",
-      "description": "Grilled chicken with garlic sauce, pickles, and fries in a pita wrap.",
-      "price": 250
+      "name": "Запеченный донер говядина",
+      "description": "Лаваш, говядина, овощи, соус, сыр",
+      "price": 275,
+      "image": "/images/shaurma1.jpg"
     },
     {
       "id": 2,
       "category": "shawarma",
-      "name": "Beef Shawarma",
-      "description": "Spiced beef with tahini, tomatoes, and onions in a soft wrap.",
-      "price": 280
+      "name": "Запеченный донер курица",
+      "description": "Лаваш, курица, овощи, соус, сыр",
+      "price": 275,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/d646ed94-febe-4962-9d2f-35b7d55ae1bd.jpg"
     },
     {
       "id": 3,
-      "category": "burgers",
-      "name": "Classic Burger",
-      "description": "Beef patty with lettuce, tomato, cheese, and special sauce.",
-      "price": 300
+      "category": "shawarma",
+      "name": "Биг донер говядина",
+      "description": "Сырный лаваш, говядина, овощи, соус",
+      "price": 300,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/7fcc3ca1-5374-4e75-ada2-92dba8579e56.jpg"
     },
     {
       "id": 4,
-      "category": "burgers",
-      "name": "Spicy Chicken Burger",
-      "description": "Crispy chicken with spicy mayo, lettuce, and pickles.",
-      "price": 270
+      "category": "shawarma",
+      "name": "Биг донер курица",
+      "description": "Сырный лаваш, курица, овощи, соус",
+      "price": 300,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/7fcc3ca1-5374-4e75-ada2-92dba8579e56.jpg"
+    
     },
     {
       "id": 5,
-      "category": "drinks",
-      "name": "Cola",
-      "description": "Chilled cola, refreshing and fizzy, 500ml.",
-      "price": 100
+      "category": "shawarma",
+      "name": "Биг донер говядина чили",
+      "description": "Сырный лаваш, говядина, овощи, соус чили, сыр",
+      "price": 300,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/7fcc3ca1-5374-4e75-ada2-92dba8579e56.jpg"
+    
     },
     {
       "id": 6,
-      "category": "drinks",
-      "name": "Mango Smoothie",
-      "description": "Creamy mango smoothie with a tropical twist.",
-      "price": 150
+      "category": "shawarma",
+      "name": "Донер говядина чили",
+      "description": "Лаваш, говядина, овощи, соус чили, сыр",
+      "price": 275,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/39234515-8721-4933-95c9-083929a21fe3.jpg"
     },
     {
       "id": 7,
-      "category": "desserts",
-      "name": "Chocolate Cake",
-      "description": "Rich chocolate cake with a creamy frosting.",
-      "price": 200
-    },
+       "category": "shawarma",
+      "name": "Донер говядина",
+      "description": "Лаваш, говядина, овощи, соус",
+      "price": 275,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/39234515-8721-4933-95c9-083929a21fe3.jpg"
+   },
     {
       "id": 8,
-      "category": "desserts",
-      "name": "Ice Cream Sundae",
-      "description": "Vanilla ice cream with chocolate sauce and sprinkles.",
-      "price": 180
+      "category": "shawarma",
+      "name": "Донер курица",
+      "description": "Лаваш, курица, овощи, соус",
+      "price": 275,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/fe655f60-8e0a-4fff-ae8f-d8a6d8fbcc98.jpg"
     },
     {
       "id": 9,
-      "category": "sides",
-      "name": "French Fries",
-      "description": "Crispy golden fries, lightly salted.",
-      "price": 120
+      "category": "shawarma",
+      "name": "Донер ассорти",
+      "description": "Лаваш, курица, говядина, овощи, соус, сыр",
+     "price": 275,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/fe655f60-8e0a-4fff-ae8f-d8a6d8fbcc98.jpg"
     },
     {
       "id": 10,
-      "category": "sides",
-      "name": "Onion Rings",
-      "description": "Crispy battered onion rings with a dipping sauce.",
-      "price": 140
-    },
+      "category": "shawarma",
+      "name": "Донер ассорти чили",
+      "description": "Лаваш, курица, говядина, овощи, соус чили, сыр",
+     "price": 275,
+      "image": "https://share-menu.kwaaka.com/images/65609c63df110fe108cad0e1/parsed-from-json/products/fe655f60-8e0a-4fff-ae8f-d8a6d8fbcc98.jpg"
+   },
     {
       "id": 11,
-      "category": "salads",
-      "name": "Caesar Salad",
-      "description": "Fresh romaine, croutons, parmesan, and Caesar dressing.",
-      "price": 220
+      "category": "shawarma",
+      "name": "Запеченный донер говядина чили",
+      "description": "Лаваш, говядина, овощи, соус чили, сыр",
+      "price": 275,
+      "image": "/images/shaurma1.jpg"
     },
     {
       "id": 12,
-      "category": "salads",
-      "name": "Greek Salad",
-      "description": "Cucumbers, tomatoes, feta, olives, and olive oil dressing.",
-      "price": 200
+      "category": "shawarma",
+      "name": "Запеченный донер курица чили",
+      "description": "Лаваш, говядина, овощи, соус чили, сыр",
+      "price": 275,
+      "image": "/images/shaurma1.jpg"
     },
     {
       "id": 13,
-      "category": "breakfast",
-      "name": "Egg Muffin",
-      "description": "Toasted muffin with egg, cheese, and sausage.",
-      "price": 180
+      "category": "drinks",
+      "name": "Лимонад Клубника-кактус",
+      "description": "Refreshing strawberry-cactus lemonade.",
+      "price": 150,
+      "image": "/images/lemonade.jpg"
     },
     {
       "id": 14,
-      "category": "breakfast",
-      "name": "Pancake Stack",
-      "description": "Fluffy pancakes with maple syrup and butter.",
-      "price": 200
+      "category": "drinks",
+      "name": "Фраппе Вишневый (сред.)",
+      "description": "Cherry frappe, medium size.",
+      "price": 180,
+      "image": "/images/cherry-frappe.jpg",
+      "isNew": true
     },
     {
       "id": 15,
-      "category": "combos",
-      "name": "Burger Combo",
-      "description": "Classic burger, fries, and a cola.",
-      "price": 450
+      "category": "drinks",
+      "name": "Айс Какао",
+      "description": "Iced cocoa drink.",
+      "price": 160,
+      "image": "/images/ice-cocoa.jpg",
+      "isNew": true
     },
     {
       "id": 16,
+      "category": "desserts",
+      "name": "Чуррос",
+      "description": "Crispy churros with cinnamon.",
+      "price": 120,
+      "image": "/images/churros.jpg"
+    },
+    {
+      "id": 17,
+      "category": "desserts",
+      "name": "Орешки со сгущёнкой",
+      "description": "Nut-shaped pastries with condensed milk.",
+      "price": 100,
+      "image": "/images/nuts.jpg",
+      "isNew": true
+    },
+    {
+      "id": 18,
+      "category": "desserts",
+      "name": "Пирожное Картошка",
+      "description": "Chocolate potato pastry.",
+      "price": 90,
+      "image": "/images/potato-cake.jpg",
+      "isNew": true
+    },
+    {
+      "id": 19,
+      "category": "desserts",
+      "name": "Медовик",
+      "description": "Honey layered cake.",
+      "price": 110,
+      "image": "/images/honey-cake.jpg",
+      "isNew": true
+    },
+    {
+      "id": 20,
+      "category": "desserts",
+      "name": "Chocolate Cake",
+      "description": "Rich chocolate cake with a creamy frosting.",
+      "price": 200,
+      "image": "/images/chocolate-cake.jpg"
+    },
+    {
+      "id": 21,
+      "category": "desserts",
+      "name": "Ice Cream Sundae",
+      "description": "Vanilla ice cream with chocolate sauce and sprinkles.",
+      "price": 180,
+      "image": "/images/ice-cream-sundae.jpg"
+    },
+    {
+      "id": 22,
+      "category": "sides",
+      "name": "French Fries",
+      "description": "Crispy golden fries, lightly salted.",
+      "price": 120,
+      "image": "/images/french-fries.jpg"
+    },
+    {
+      "id": 23,
+      "category": "sides",
+      "name": "Onion Rings",
+      "description": "Crispy battered onion rings with a dipping sauce.",
+      "price": 140,
+      "image": "/images/onion-rings.jpg"
+    },
+    {
+      "id": 24,
+      "category": "salads",
+      "name": "Caesar Salad",
+      "description": "Fresh romaine, croutons, parmesan, and Caesar dressing.",
+      "price": 220,
+      "image": "/images/caesar-salad.jpg"
+    },
+    {
+      "id": 25,
+      "category": "salads",
+      "name": "Greek Salad",
+      "description": "Cucumbers, tomatoes, feta, olives, and olive oil dressing.",
+      "price": 200,
+      "image": "/images/greek-salad.jpg"
+    },
+    {
+      "id": 26,
+      "category": "breakfast",
+      "name": "Egg Muffin",
+      "description": "Toasted muffin with egg, cheese, and sausage.",
+      "price": 180,
+      "image": "/images/egg-muffin.jpg"
+    },
+    {
+      "id": 27,
+      "category": "breakfast",
+      "name": "Pancake Stack",
+      "description": "Fluffy pancakes with maple syrup and butter.",
+      "price": 200,
+      "image": "/images/pancake-stack.jpg"
+    },
+    {
+      "id": 28,
+      "category": "combos",
+      "name": "Burger Combo",
+      "description": "Classic burger, fries, and a cola.",
+      "price": 450,
+      "image": "/images/burger-combo.jpg"
+    },
+    {
+      "id": 29,
       "category": "combos",
       "name": "Shawarma Combo",
       "description": "Chicken shawarma, side salad, and a drink.",
-      "price": 400
+      "price": 400,
+      "image": "/images/shawarma-combo.jpg"
+    },
+    {
+      "id": 30,
+      "category": "kids",
+      "name": "Кидз Комбо обед с игрушкой Мини-фест",
+      "description": "Kids meal with a toy.",
+      "price": 300,
+      "image": "/images/kids-combo.jpg"
+    },
+    {
+      "id": 31,
+      "category": "other",
+      "name": "Стикеры в помощь детям 1 шт.",
+      "description": "Charity stickers.",
+      "price": 50,
+      "image": "/images/stickers.jpg"
     }
   ]
 }
