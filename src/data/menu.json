@@ -1,0 +1,127 @@
+{
+  "categories": [
+    "all",
+    "shawarma",
+    "burgers",
+    "drinks",
+    "desserts",
+    "sides",
+    "salads",
+    "breakfast",
+    "combos"
+  ],
+  "items": [
+    {
+      "id": 1,
+      "category": "shawarma",
+      "name": "Chicken Shawarma",
+      "description": "Grilled chicken with garlic sauce, pickles, and fries in a pita wrap.",
+      "price": 250
+    },
+    {
+      "id": 2,
+      "category": "shawarma",
+      "name": "Beef Shawarma",
+      "description": "Spiced beef with tahini, tomatoes, and onions in a soft wrap.",
+      "price": 280
+    },
+    {
+      "id": 3,
+      "category": "burgers",
+      "name": "Classic Burger",
+      "description": "Beef patty with lettuce, tomato, cheese, and special sauce.",
+      "price": 300
+    },
+    {
+      "id": 4,
+      "category": "burgers",
+      "name": "Spicy Chicken Burger",
+      "description": "Crispy chicken with spicy mayo, lettuce, and pickles.",
+      "price": 270
+    },
+    {
+      "id": 5,
+      "category": "drinks",
+      "name": "Cola",
+      "description": "Chilled cola, refreshing and fizzy, 500ml.",
+      "price": 100
+    },
+    {
+      "id": 6,
+      "category": "drinks",
+      "name": "Mango Smoothie",
+      "description": "Creamy mango smoothie with a tropical twist.",
+      "price": 150
+    },
+    {
+      "id": 7,
+      "category": "desserts",
+      "name": "Chocolate Cake",
+      "description": "Rich chocolate cake with a creamy frosting.",
+      "price": 200
+    },
+    {
+      "id": 8,
+      "category": "desserts",
+      "name": "Ice Cream Sundae",
+      "description": "Vanilla ice cream with chocolate sauce and sprinkles.",
+      "price": 180
+    },
+    {
+      "id": 9,
+      "category": "sides",
+      "name": "French Fries",
+      "description": "Crispy golden fries, lightly salted.",
+      "price": 120
+    },
+    {
+      "id": 10,
+      "category": "sides",
+      "name": "Onion Rings",
+      "description": "Crispy battered onion rings with a dipping sauce.",
+      "price": 140
+    },
+    {
+      "id": 11,
+      "category": "salads",
+      "name": "Caesar Salad",
+      "description": "Fresh romaine, croutons, parmesan, and Caesar dressing.",
+      "price": 220
+    },
+    {
+      "id": 12,
+      "category": "salads",
+      "name": "Greek Salad",
+      "description": "Cucumbers, tomatoes, feta, olives, and olive oil dressing.",
+      "price": 200
+    },
+    {
+      "id": 13,
+      "category": "breakfast",
+      "name": "Egg Muffin",
+      "description": "Toasted muffin with egg, cheese, and sausage.",
+      "price": 180
+    },
+    {
+      "id": 14,
+      "category": "breakfast",
+      "name": "Pancake Stack",
+      "description": "Fluffy pancakes with maple syrup and butter.",
+      "price": 200
+    },
+    {
+      "id": 15,
+      "category": "combos",
+      "name": "Burger Combo",
+      "description": "Classic burger, fries, and a cola.",
+      "price": 450
+    },
+    {
+      "id": 16,
+      "category": "combos",
+      "name": "Shawarma Combo",
+      "description": "Chicken shawarma, side salad, and a drink.",
+      "price": 400
+    }
+  ]
+}
