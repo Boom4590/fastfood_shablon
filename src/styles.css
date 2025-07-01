@@ -52,7 +52,9 @@ body {
   #locations, #about {
     margin-top: 60px;
   }
-  
+  .logo img{
+    height:'46px' !important
+  }
   .header{
         background:green;}
 .burger-btn,#burgerito{
