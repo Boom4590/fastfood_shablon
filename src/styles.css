@@ -35,9 +35,13 @@ body {
 }
 /* Tablet Styles (768px-1279px) */
 @media (min-width: 768px) and (max-width: 1479px) {
-  #locations, #about,.hero-image {
+  .instagram-logo{
+    color:rgb(225, 0, 0) !important
+  }
+  #locations, #about {
     margin-top: 80px;
   }
+   
   .burger-btn,#burgerito{
     display: none ;
   }
@@ -48,6 +52,9 @@ body {
   #locations, #about {
     margin-top: 60px;
   }
+  
+  .header{
+        background:green;}
 .burger-btn,#burgerito{
     display: block ;
   }

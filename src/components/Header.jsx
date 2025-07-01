@@ -19,10 +19,10 @@ function toMenu(){
     <>
       <style jsx>{`
         .header {
-          background-color: rgba(255, 255, 255, 0.3)); /* прозрачный зелёный */
-          backdrop-filter: blur(20px);
+
+         
           -webkit-backdrop-filter: blur(10px);
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          
           position: fixed;
           width: 100%;
           top: 0;
@@ -40,7 +40,7 @@ function toMenu(){
         }
 
         .logo img {
-          height: 48px;
+          height:66px;
           object-fit: contain;
         }
 
@@ -182,16 +182,16 @@ function toMenu(){
               className="nav-button"
               onClick={() => (window.location.href = "/locations")}
             >
-              Locations in Bishkek
+              Точки в Бишкек (12)
             </button>
             <button
               className="nav-button"
               onClick={toMenu}
             >
-              Our Menu
+              Меню
             </button>
             <a
-              href="https://instagram.com/yourpage"
+              href="https://www.instagram.com/oasis_kg/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -211,7 +211,7 @@ function toMenu(){
             alignItems: "center",
           }}
         >
-          <h2>Bishkek</h2>
+          <h2>Бишкек</h2>
           <div
             className="close-btn"
             onClick={toggleMenu}
@@ -226,7 +226,7 @@ function toMenu(){
         <ul>
           <li>
             <Link to="/locations" onClick={toggleMenu}>
-              Locations in Bishkek
+              Заведения фастфуд
             </Link>
           </li>
           <li>
@@ -239,12 +239,12 @@ function toMenu(){
                 });
               }}
             >
-              Our Menu
+              Меню
             </Link>
           </li>
           <li>
             <Link to="/about" onClick={toggleMenu}>
-              About
+              О нас
             </Link>
           </li>
         </ul>

@@ -49,6 +49,7 @@ function Home() {
           font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
           background-color: #f4f9f4;
         }
+          
 
         .hero {
           position: relative;
@@ -419,7 +420,8 @@ function Home() {
         @media (max-width: 767px) {
         .header{
         height:74px;
-        background-color:green}
+        background-color:green
+        }
           .main-content {
             padding-bottom: 100px;
           }
@@ -496,11 +498,11 @@ function Home() {
 
           .categories {
             width: 100%;
-            padding-left: 0;
-            padding-right: 0;
+      
+           
             display: flex;
             justify-content: flex-start;
-            margin: 0 auto;
+            margin: 0 auto !important;
             overflow-x: auto;
             gap: 10px;
             padding: 10px 0;
@@ -537,6 +539,7 @@ function Home() {
             align-items: center;
             width: 100px;
             cursor: pointer;
+            
             flex-shrink: 0;
             font-size: 18px;
             font-weight: 600;
@@ -561,7 +564,9 @@ function Home() {
           .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
+            margin:0;
             gap: 20px;
+     
           }
 
           .menu-item {
@@ -696,15 +701,31 @@ function Home() {
           loading="lazy"
         />
         <div className="hero-content">
-          <h1 className="animate-fadeIn">Welcome to Fast Food</h1>
-          <p>Discover delicious meals at our Bishkek locations. Order now on Glovo!</p>
-          <button
-            id="animate-button"
-            onClick={() => window.location.href = "https://glovoapp.com"}
-            aria-label="Order on Glovo"
-          >
-            Order Now
-          </button>
+          <div className="animate-fadeIn"><h2>Добро пожаловать в</h2><h1>Oasis</h1></div>
+          <p>Asian doner & kebab</p>
+         <button
+  id="animate-button"
+  onClick={() => window.location.href = "https://glovoapp.com"}
+  aria-label="Order on Glovo"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    
+        gap: "8px" // Отступ между текстом и иконкой
+  }}
+>
+  Заказать в
+  <img
+    src="https://glovoapp.com/images/glovo-white.svg"
+    alt="Glovo logo"
+    style={{
+      height: "20px",
+      marginBottom:'4px'
+    }}
+  />
+</button>
+
+
         </div>
       </section>
       <section className="promo" style={{ display: 'none' }}>
@@ -779,15 +800,28 @@ function Home() {
         </div>
       </section>
       <section className="cta">
-        <h2 className="animate-fadeIn">Ready to Order?</h2>
-        <p>Visit Glovo to enjoy our delicious menu today!</p>
-        <button
-          id="animate-button"
-          onClick={() => window.location.href = "https://glovoapp.com"}
-          aria-label="Order on Glovo Now"
-        >
-          Order on Glovo
-        </button>
+        <h2 className="animate-fadeIn">Первый раз?</h2>
+        <p>Закажите в Glovo прямо сейчас!</p>
+         <button
+  id="animate-button"
+  onClick={() => window.location.href = "https://glovoapp.com"}
+  aria-label="Order on Glovo"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px" // Отступ между текстом и иконкой
+  }}
+>
+  Открыть в
+  <img
+    src="https://glovoapp.com/images/glovo-white.svg"
+    alt="Glovo logo"
+    style={{
+      height: "20px",
+      marginBottom:'4px'
+    }}
+  />
+</button>
       </section>
     </div>
   );

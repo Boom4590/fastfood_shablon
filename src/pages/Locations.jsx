@@ -16,7 +16,7 @@ function Locations() {
           max-width: 1280px;
           margin: 0 auto;
         }
-
+       
         .locations h2 {
           text-align: center;
           font-size: 32px;
